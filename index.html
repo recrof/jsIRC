@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jsIRC</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="lib/jsocket.js" type="text/javascript"></script>
+    <script src="lib/swfobject.js" type="text/javascript"></script>
+    <script src="lib/config.js" type="text/javascript"></script>
+    <script src="lib/jsirc.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="my_socket"></div>
+    <div id="fixed_box">
+      <div id="connect_bar">
+        <table>
+          <tr><td>Nick</td><td><input id="nick" type="text" value="Anonym" /></td></tr>
+          <tr><td>Real Name</td><td><input id="realname" type="text" value="http://irc.post.sk/js" /></td></tr>
+          <tr><td>Channels</td><td><input id="channels" type="text" value="#post.sk,#night" /></td></tr>        
+          <tr>
+            <td><a href="javascript:showAdvancedConnectSettings()">advanced</a></td>
+            <td><input style="float: right" value="Connect" type="button" onclick="init()" default="1"/></td>
+          </tr>
+        </table>        
+        <table id="c_advanced">
+          <tr id="t_server"><td>Server</td><td><input id="server" type="text" value="irc.post.sk" /></td></tr>
+          <tr id="t_port"><td>Port</td><td><input id="port" type="text" value="6667" /></td></tr>
+          <tr id="t_ident"><td>Ident</td><td><input id="ident" type="text" value="js" /></td></tr>
+        </table>
+        
+      </div>
+    </div>
+    <div id="panel" class="panel"></div>
+    <div id="container" class="container"></div>
+    <input type="text" class="input" id="input" onkeydown="keyPressed(event)" onkeyup="event.preventDefault();"/>
+  </body>
+</html>
